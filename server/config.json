@@ -1,0 +1,25 @@
+{
+  "restApiRoot": "/api",
+  "host": "0.0.0.0",
+  "port": 3000,
+  "remoting": {
+    "context": false,
+    "rest": {
+      "handleErrors": false,
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false
+  },
+  "connectionString": "mongodb://34.205.26.87:27017/sprucedb",
+  "apiUrl": "http://localhost:3000",
+  "secret": "REPLACE THIS WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
+}

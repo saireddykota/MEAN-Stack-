@@ -1,0 +1,48 @@
+
+<h1 class="browsejob">
+	{{title}}
+</h1>
+<div *ngIf="postjobs.length" class="browse-list">
+	<article *ngFor="let postjob of postjobs">
+		<div class="row">
+			<div class="col-md-8">
+				<ul id="BA" style="padding-bottom:0px;">						
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+					<div class="row">
+						<div class="col-md-8 col-sm-8 col-xs-12">
+							<ul id="itjobs">
+						       <li><a routerLink="/desc" id="link" data-toggle="modal" data-target="#Pop"><b>{{postjob.jobtitle}}</b></a></li><br/>
+							   <li><i class="fa fa-briefcase"></i>{{postjob.experience}}</li>
+							   <li><i class="fa fa-calendar" style="padding-left:25px;"></i>{{postjob.posteddate}}</li>
+							   <li><i class="fa fa-map-marker" style="padding-left:25px;"></i>{{postjob.city}},{{postjob.state}}</li> 
+							</ul>
+							</div>
+					
+					<div class="col-md-2 col-sm-6 col-xs-6" style="margin-top: 20px;">
+						<button  id="rerun-button" type="button" class="btn btn-primary dropdown-toggle  rerun-button" data-toggle="dropdown" >Share <span class="caret"></span></button>						
+						     <ul class="dropdown-menu">								  
+								<li><a href="https://twitter.com/" class="fa fa-twitter"> <label> &nbsp; </label>  Tweet this job</a></li>
+								<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"><label> &nbsp; </label>  Share on Linkedin</a></li>
+								<li><a href="https://accounts.google.com/" class="fa fa-envelope"><label> &nbsp; </label> Email your friend</a></li>
+							</ul>														 
+					</div>
+					<div class="col-md-2 col-sm-6 col-xs-6" style="margin-top: 20px;">
+						  <button id="rerun-button" type="button" class="delete" (click)="delete(postjob); $event.stopPropagation()"><i class="fa fa-trash"></i>Delete</button>	
+
+
+					</div>
+
+
+					</div>
+				</ul>
+			</div>	
+
+			
+					<div class="col-md-2 col-sm-6 col-xs-6" style="margin-top: 20px;">
+						  <button id="rerun-button" type="button" class="btn btn-primary  rerun-button" data-toggle="modal" data-target="#Pop" >Update</button>										
+					</div>
+		</div>
+		
+	</article>
+</div>
+

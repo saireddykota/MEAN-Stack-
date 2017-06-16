@@ -1,0 +1,63 @@
+{
+  "name": "resume",
+  "plural": "resume",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "default": "address"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "zipcode": {
+      "type": "number",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "number",
+      "required": true
+    },
+    "resumepath": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

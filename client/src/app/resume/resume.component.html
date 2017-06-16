@@ -1,0 +1,77 @@
+
+<div class="container" id="resume">
+  <form #f="ngForm" (ngSubmit)="onSubmit()" action="" method="post" target="_top">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">{{errorMessage}}</div>
+        <div class="col-md-6 col-md-offset-3 form-group">
+
+            <br><br><br><br><br><br>
+            <h1>Submit Your Resume</h1>
+
+            <h4>Set up your profile and upload a resume so employers can find you.</h4>
+
+            <p>Please complete all of the required fields and upload a version of your resume (.pdf, .docx, and .doc accepted).</p>
+           
+            <label for="resume-firstname">First Name*</label>
+            <input required pattern="[a-z]{1,15}" title="Username should only contain lowercase letters. e.g. ravi" type="text"  class="form-control"  id="resume-firstname"  [(ngModel)]="post.firstname"  name="firstname" 
+            placeholder="First Name"><br>
+
+            <label for="resume-lastname">Last Name*</label>
+            <input required type="text"  class="form-control"  id="resume-lastname"  [(ngModel)]="post.lastname"  name="lastname" 
+            placeholder="Last Name"><br>
+
+            <label for="resume-company">Compnany*</label>
+            <input required type="text"  class="form-control"  id="resume-company"  [(ngModel)]="post.company"  name="company" 
+            placeholder="Compnany"><br>
+
+            <label for="resume-email">E-mail*</label>
+            <input required type="email"  class="form-control"  id="resume-email"  [(ngModel)]="post.email"  name="email" 
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="E-mail"><br>
+
+            <label for="resume-address1">Address*</label>
+            <input required type="text"  class="form-control"  id="resume-address"  [(ngModel)]="post.address"  name="address" 
+            placeholder="Address"><br>
+
+
+            <label for="resume-city">City*</label>
+            <input required type="text"  class="form-control"  id="resume-city"  [(ngModel)]="post.city"  name="city" 
+            placeholder="City"><br>
+
+            <label for="resume-state">State*</label>
+            <input required type="text"  class="form-control"  id="resume-state"  [(ngModel)]="post.state"  name="state" 
+            placeholder="State"><br>
+
+
+            <label for="resume-country">Country*</label>
+            <input required type="text"  class="form-control"  id="resume-country"  [(ngModel)]="post.country"  name="country" 
+            placeholder="Country"><br>
+
+            <label for="resume-zipcode">Zip Code*</label>
+            <input required type="text"  class="form-control"  id="resume-zipcode"  [(ngModel)]="post.zipcode"  name="zipcode" 
+                placeholder="Zip Code"><br>
+
+            <label for="resume-phone">Phone Number*</label>
+            <input required type="tel"  class="form-control"  id="resume-phone"  [(ngModel)]="post.phone"  name="phone" 
+            pattern='^\+?\d{0,13}'  placeholder="Phone Number"><br>
+
+            <label for="resume-resumepath">Resume*</label>
+            <input  type="text" style="display: none"  class="form-control"  id="resume-resumepath"  [(ngModel)]="post.resumepath"  name="resumepath" 
+            placeholder="Resume Path"><br>
+<!--
+            <label for="resume-date"  style="display: none">Date</label>
+            <input  type="text" style="display: none"  class="form-control"  id="resume-date"  [(ngModel)]="post.date"  name="date" 
+            placeholder="Date"><br>-->
+
+            <input required type="file" (change)="fileEvent($event)" id= "resume-file" /><br>
+
+            <div *ngIf="successMessage" class="alert alert-success" role="alert">{{successMessage}}</div>
+            <br>
+            <input type="submit" class = "btn btn-lg btn-primary pull-right" value="Submit"><br><br>
+
+         </div>
+    </form>
+</div>
+<br>
+
+
+
+

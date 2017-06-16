@@ -1,0 +1,30 @@
+.browsejob{
+    padding: 20px 0px 0px 80px;
+}
+.row{
+    margin-right: 10px;
+
+}
+
+#itjobs{
+    list-style: none;
+    position: relative;
+}
+#itjobs li a{
+    text-decoration: none;
+}
+
+#itjobs li{
+    padding-top: 10px;
+    display: inline-block;
+}
+.dropdown-menu li:hover .fa-twitter{
+    color: #00b6f1;
+}
+.dropdown-menu li:hover .fa-linkedin{
+      color: #04669a; 
+}
+.dropdown-menu li:hover .fa-envelope{
+    color: #c20806;
+}
+

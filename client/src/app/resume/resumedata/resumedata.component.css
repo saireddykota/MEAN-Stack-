@@ -1,0 +1,53 @@
+.browse-list{
+    margin-top: 100px;
+}
+p{
+    color:red;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th
+{
+    table-layout: fixed;
+    background-color: #05aee0;
+    color: #ffffff;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#resume .form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 16px;
+  margin-top: 10px;  
+}
+
+#resume .form-control:focus {
+  border-bottom: 2px solid dodgerblue;
+}
+#resume button#submit {
+  background: #575a60;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 300;
+  height: 55px;
+  padding-bottom: 10px;
+}
+.delete
+{
+    display: block;
+    margin: auto;
+}

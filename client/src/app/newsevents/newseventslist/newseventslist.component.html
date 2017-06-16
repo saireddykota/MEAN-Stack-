@@ -1,0 +1,91 @@
+
+
+<div *ngIf="newseventss.length" class="newseventslist">
+
+<div class="container">
+<img [src]="NEWS" class="img-responsive" width="100%"  alt="News">
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6">
+<div class="aboutus_area wow fadeInLeft">
+  <h2 class="titile">News & Events</h2>
+  <p>As the technology landscape continues to evolve, you can count on Spruce Infotech Consulting to provide the latest announcements, 
+										 thought leadership and research. It's just one more way that we help our Consultants and Clients to compete and win in
+										 today's technology driven global markets.</p>
+  <div class="news">
+    <header>Recent Blog Article</header>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+<img [src]="NEWS2" class="img-responsive" alt="News">
+</div>
+	<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									   <div class="views-row-odd views-row-first" *ngFor="let newsevents of newseventss">
+										<a routerLink = "/newseventsdetail/{{newsevents.id}}" target="_blank"><p>{{newsevents.title}}</p></a>
+									   </div>
+									
+										
+									</div>
+</div>
+
+</div>
+</div>
+       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+         <ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#news">News</a></li>
+  <li><a data-toggle="tab" href="#events">Events</a></li>
+  
+</ul>
+
+
+<div class="tab-content">
+  <div id="news" class="tab-pane fade in active" *ngFor="let newsevents of newseventss">
+    <p><a routerLink = "/newseventsdetail/{{newsevents.id}}">{{newsevents.title}}</a></p>
+	<p>{{newsevents.shortdescription}}
+	<a routerLink = "/newseventsdetail/{{newsevents.id}}">Read More....</a></p>
+  </div>
+
+
+
+
+  <div id="events" class="tab-pane fade" *ngFor="let newsevents of newseventss">
+	<p><a href="event1.html#event1" target="_blank"><strong>Go Digital or Die — June 23, 2016 | Events</strong></a><br>
+												
+  <p color="#777777">Technology has moved from the peripheral facilitator it used to be to the heart of every enterprise. The CIO is in a 
+  position not only to confirm an idea’s feasibility but also to innovate and be   
+  <a href="event1.html#event1" target="_blank">Read More.....</a></p>
+  
+  
+  <p><a href="event2.html#event2" target="_blank"><strong>Online Information Session - Master in Management Grande Ecole</strong></a><br>
+  Spruce Infotech will be holding an Online Information Session about its Master in Management Grande École program on Friday January 6, 11:00am-11:45am CET 
+  <a href="event2.html#event2" target="_blank">Read More.....</a></p>
+
+  </div>
+
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

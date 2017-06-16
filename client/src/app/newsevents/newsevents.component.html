@@ -1,0 +1,78 @@
+
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+  <h1>News & Events</h1>
+  <form #f="ngForm" (ngSubmit)="onSubmit()" action="" method="post" target="_top">
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">{{errorMessage}}</div>
+  
+    <label for="newsevents-title">Title<span class="asterisk">*</span></label>
+    <input required type="text"
+     class="form-control" 
+     id="newsevents-title" 
+     [(ngModel)]="post.title" name="title" placeholder="Title">
+     <br>
+ 
+    <label for="newsevents-imagename">Image</label>
+    <input  type="text" 
+    class="form-control" 
+    id="newsevents-imagename" 
+    [(ngModel)]="post.imagename" 
+    name="imagename" 
+    placeholder="Image Name"
+   style="display:none;">
+
+    
+    
+ <br>
+
+<input type="file" (change)="fileEvent($event)" />
+   <!-- <div class="subsection">
+        <h4>Upload Status:</h4>
+        <div class="indent">
+          <span class="monospace result">{{uploadStatus}}</span>
+        </div>
+      </div> -->
+  <br>
+    <label for="newsevents-shortdescription">Short Description<span class="asterisk">*</span></label>
+    <textarea type="text" 
+    class="form-control" 
+    id="newsevents-shortdescription" 
+    rows="3" [(ngModel)]="post.shortdescription" 
+    name="shortdescription" placeholder="Short Description"></textarea>
+  <br>
+    <label for="newsevents-longdescription">Long Description<span class="asterisk">*</span></label>
+    <textarea type="text" 
+    class="form-control" 
+    id="newsevents-longdescription" 
+    rows="6" [(ngModel)]="post.longdescription" 
+    name="longdescription" 
+    placeholder="Long Description"></textarea>
+    <br>
+
+    <label for="newsevents-type">Type<span class="asterisk">*</span></label>
+       <select id="newsevents-type" name="type" class="form-control input-md" [(ngModel)]="post.type" aria-placeholder="Type">
+        <option value="" disabled="disabled" selected="selected"></option>
+        <option value=1 selected="selected">News</option>
+        <option value=2 selected="selected">Events</option>
+      </select>
+<br>
+  <label for="newsevents-status"> Status<span class="asterisk">*</span></label>
+       <select id="newsevents-status" name="Status" class="form-control input-md" [(ngModel)]="post.status" aria-placeholder="Status">
+        <option value="" disabled="disabled" selected="selected"></option>
+        <option value=1 selected="selected">Open</option>
+        <option value=2 selected="selected">Paused</option>
+        <option value=3 selected="selected">Closed</option>
+      </select>
+
+<br>
+  
+ <input class="btn btn-default" type="submit" class = "btn btn-primary" ng-click="onSubmit()" value="Submit">
+
+</form></div>
+</div>
+<br>
+
+
+
+
+

@@ -1,0 +1,54 @@
+{
+  "name": "job",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "jobtitle": {
+      "type": "string",
+      "required": true
+    },
+    "skillsneed": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "jobdesc": {
+      "type": "string",
+      "required": true
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "posteddate": {
+      "type": "date",
+      "required": true
+    },
+    "adminemail": {
+      "type": "string",
+      "required": true
+    },
+    "adminname": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

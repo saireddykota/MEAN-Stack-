@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sprucedatasource": {
+    "host": "34.205.26.87",
+    "port": 27017,
+    "database": "sprucedb",
+    "password": "",
+    "name": "sprucedatasource",
+    "connector": "mongodb",
+    "user": "sprucedbuser"
+  }
+}
